@@ -56,7 +56,7 @@ function Home() {
 
   return (
     <div className="home">
-      <BlogHeading>Tech Blog</BlogHeading>
+      <BlogHeading>Chronicle Blogs</BlogHeading>
       <div id="blog-by">Krishna</div>
 
       {posts.map((post, index) => {

@@ -1,8 +1,9 @@
-import { useState } from "react";
 import { firestore } from "../firebase";
 import { useFormInput } from "./hooks";
+import { useNavigate } from "react-router-dom";
 
 function CreatePost() {
+  const navigate = useNavigate();
   const title = useFormInput("");
   const subTitle = useFormInput("");
   const content = useFormInput("");
@@ -16,6 +17,7 @@ function CreatePost() {
       content: content.value,
       createdAt: new Date(),
     });
+    navigate("/");
   }
 
   return (
